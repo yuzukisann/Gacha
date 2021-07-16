@@ -10,7 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    
+    var number: Int = 0
+    @IBOutlet var label: UILabel!
     
 
     
@@ -22,7 +23,17 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    
+    
+    @IBAction func plus() {
+        number = number + 1
+        label.text = String(number)
+    }
+    
+    @IBAction func mainasu() {
+        number = number - 10
+        label.text = String(number)
+    }
 
 }
 
