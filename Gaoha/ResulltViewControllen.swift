@@ -11,6 +11,11 @@ import AVFoundation
 class ResultViewController: UIViewController {
     
     
+    let kawaiiPlayer: AVAudioPlayer = try! AVAudioPlayer(data: NSDataAsset(name:"kawaii")!.data)
+    
+    
+    //    let rappaPlayer = try! AVAudioPlayer(data:
+    
     
     
     
@@ -21,42 +26,74 @@ class ResultViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        monsterImageView.frame.origin.y = -800
+        
+        
         // 0から9までのなかでランダム
         number = Int.random(in: 0...15)
         // if=もし
         // もしnumberが9だったら
         if number == 9 {
             monsterImageView.image = UIImage(named: "1")
-            backgroundImageView.image = UIImage(named: "kusa")
-        // numberが7以上だったら
-//        } else if number > 7 {
-        // もしnumberが9だったら
+            
+            // numberが7以上だったら
+            //        } else if number > 7 {
+            // もしnumberが9だったら
         } else if number > 12 {
             monsterImageView.image = UIImage(named: "2")
-            backgroundImageView.image = UIImage(named: "kusa")
+            
         } else if number > 8 {
             monsterImageView.image = UIImage(named: "3")
-            backgroundImageView.image = UIImage(named: "kusa")
+            
         } else if number > 6 {
             monsterImageView.image = UIImage(named: "4")
-            backgroundImageView.image = UIImage(named: "kusa")
+            
         }
         // それ以外
         else {
             monsterImageView.image = UIImage(named: "5")
-            backgroundImageView.image = UIImage(named: "kusa")
+            
         }
         
-        }
+        
+        
+        
+        
+        
+    }
+    
+    //
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+                            
+        sleep(1)
+        
+        kawaiiPlayer.currentTime = 0
+
+        kawaiiPlayer.play()
+        
+        UIView.animate(
+            withDuration: 1,
+            
+            animations: {
+                self.monsterImageView.frame.origin.y = 100
+                
+            },
+            
+            completion: nil
+        )
+    }
+    
+    
     @IBAction func back() {
         self.dismiss(animated: true, completion: nil)
     }
-
     
-        
-
-    }
-
-
     
+    
+    
+}
+
+
+
