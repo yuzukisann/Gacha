@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2192E91326BD46A500338089 /* Result10ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2192E91226BD46A500338089 /* Result10ViewController.swift */; };
 		21B397082673703400D410E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B397072673703400D410E2 /* AppDelegate.swift */; };
 		21B3970A2673703400D410E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B397092673703400D410E2 /* SceneDelegate.swift */; };
 		21B3970C2673703400D410E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B3970B2673703400D410E2 /* ViewController.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2192E91226BD46A500338089 /* Result10ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result10ViewController.swift; sourceTree = "<group>"; };
 		21B397042673703400D410E2 /* Gaoha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gaoha.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21B397072673703400D410E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21B397092673703400D410E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				21B397102673704300D410E2 /* Assets.xcassets */,
 				21B397122673704300D410E2 /* LaunchScreen.storyboard */,
 				21B397152673704300D410E2 /* Info.plist */,
+				2192E91226BD46A500338089 /* Result10ViewController.swift */,
 			);
 			path = Gaoha;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2192E91326BD46A500338089 /* Result10ViewController.swift in Sources */,
 				21B3973D2673794C00D410E2 /* ResulltViewControllen.swift in Sources */,
 				21B3970C2673703400D410E2 /* ViewController.swift in Sources */,
 				21B397082673703400D410E2 /* AppDelegate.swift in Sources */,
