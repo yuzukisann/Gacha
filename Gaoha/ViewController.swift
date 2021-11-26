@@ -22,17 +22,19 @@ class ViewController: UIViewController {
     
     var number: Int = 0
     @IBOutlet var label: UILabel!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        // Do any additional setup after loading the view
+        kawaiiButton.isEnabled = false
+        zyannButton.isEnabled = false
     }
     
     
     @IBAction func touchUpButton() {
         
         kawaiiPlayer.currentTime = 0
-
+        
         kawaiiPlayer.play()
         
     }
@@ -40,20 +42,46 @@ class ViewController: UIViewController {
     @IBAction func touchDownGuitarButton() {
         
         zyannPlayer.currentTime = 0
-
+        
         zyannPlayer.play()
         
     }
     
     @IBAction func plus() {
-        number = number + 1
+        number = number + 10000
         label.text = String(number)
+        // お金が10以上だったら、ボタンを押せるようにする.
+        if number >= 10 {
+            kawaiiButton.isEnabled = true
+        }
+        if number >= 100 {
+            zyannButton.isEnabled = true
+        }
     }
     
     @IBAction func mainasu() {
         number = number - 10
         label.text = String(number)
+        
+        if number < 10 {
+            kawaiiButton.isEnabled = false
+        }
+        
     }
-
+    
+    @IBAction func mainasu2() {
+        number = number - 100
+        label.text = String(number)
+        
+        if number < 100 {
+            zyannButton.isEnabled = false
+        }
+        
+        
+            
+        
+        
+    }
+    
+    
 }
-
