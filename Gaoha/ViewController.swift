@@ -20,6 +20,9 @@ class ViewController: UIViewController {
     
     @IBOutlet var zyannButton: UIButton!
     
+    // UserDefaultsを使うことを宣言する
+    var saveData: UserDefaults = UserDefaults.standard
+    
     var number: Int = 0
     @IBOutlet var label: UILabel!
     
@@ -28,6 +31,11 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view
         kawaiiButton.isEnabled = false
         zyannButton.isEnabled = false
+        
+        // moneyという名前で保存されている値を取り出して
+        number = saveData.object(forKey: "money") as? Int ?? 0
+        // labelに反映させる
+        label.text = String(number)
     }
     
     
@@ -48,8 +56,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func plus() {
-        number = number + 10000
+        number = number + 1
         label.text = String(number)
+        // UserDefaultsにnumberを値をmoneyって名前で保存する
+        saveData.set(number, forKey: "money")
+        
         // お金が10以上だったら、ボタンを押せるようにする.
         if number >= 10 {
             kawaiiButton.isEnabled = true
