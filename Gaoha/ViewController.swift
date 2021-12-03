@@ -34,6 +34,13 @@ class ViewController: UIViewController {
         
         // moneyという名前で保存されている値を取り出して
         number = saveData.object(forKey: "money") as? Int ?? 0
+        
+        if number >= 10 {
+            kawaiiButton.isEnabled = true
+        }
+        if number >= 100 {
+            zyannButton.isEnabled = true
+        }
         // labelに反映させる
         label.text = String(number)
     }
