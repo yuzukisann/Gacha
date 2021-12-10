@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--ガチャ-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Gaoha" customModuleProvider="target" sceneMemberID="viewController">
@@ -72,7 +72,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="wVJ-Me-AEe"/>
+                    <tabBarItem key="tabBarItem" title="ガチャ" image="mappin.and.ellipse" catalog="system" id="wVJ-Me-AEe"/>
                     <connections>
                         <outlet property="kawaiiButton" destination="fkh-O2-pNf" id="8t6-IV-UoS"/>
                         <outlet property="label" destination="P71-86-zqb" id="Dpy-0I-LBM"/>
@@ -207,6 +207,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="XYN-Z8-X0e" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="myZ-Jt-7GE">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -219,7 +220,7 @@
             </objects>
             <point key="canvasLocation" x="-36.231884057971016" y="52.901785714285715"/>
         </scene>
-        <!--Item-->
+        <!--キャラ一覧-->
         <scene sceneID="Dqw-IX-ypz">
             <objects>
                 <viewController id="FxE-pz-n5H" sceneMemberID="viewController">
@@ -229,7 +230,7 @@
                         <viewLayoutGuide key="safeArea" id="Gb1-Fp-mLP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="f6I-a3-Pji"/>
+                    <tabBarItem key="tabBarItem" title="キャラ一覧" image="magnifyingglass" catalog="system" id="f6I-a3-Pji"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Blh-Pw-7PH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -244,6 +245,8 @@
         <image name="5" width="1500" height="1500"/>
         <image name="gtya" width="1500" height="1500"/>
         <image name="haikei" width="1500" height="1500"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="mappin.and.ellipse" catalog="system" width="118" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
