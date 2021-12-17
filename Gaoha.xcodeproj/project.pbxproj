@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		217C9135276C95B4005E3F9A /* CustomCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217C9133276C95B4005E3F9A /* CustomCellCollectionViewCell.swift */; };
+		217C9136276C95B4005E3F9A /* CustomCellCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 217C9134276C95B4005E3F9A /* CustomCellCollectionViewCell.xib */; };
 		218329DE2763626E00573556 /* CharacterListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218329DD2763626E00573556 /* CharacterListViewController.swift */; };
 		2192E91326BD46A500338089 /* Result10ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2192E91226BD46A500338089 /* Result10ViewController.swift */; };
 		21B397082673703400D410E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B397072673703400D410E2 /* AppDelegate.swift */; };
@@ -33,6 +35,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		217C9133276C95B4005E3F9A /* CustomCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellCollectionViewCell.swift; sourceTree = "<group>"; };
+		217C9134276C95B4005E3F9A /* CustomCellCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCellCollectionViewCell.xib; sourceTree = "<group>"; };
 		218329DD2763626E00573556 /* CharacterListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewController.swift; sourceTree = "<group>"; };
 		2192E91226BD46A500338089 /* Result10ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result10ViewController.swift; sourceTree = "<group>"; };
 		21B397042673703400D410E2 /* Gaoha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gaoha.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,11 +100,13 @@
 				21B3973C2673794C00D410E2 /* ResulltViewControllen.swift */,
 				21B3970B2673703400D410E2 /* ViewController.swift */,
 				21B3970D2673703400D410E2 /* Main.storyboard */,
+				218329DD2763626E00573556 /* CharacterListViewController.swift */,
+				217C9133276C95B4005E3F9A /* CustomCellCollectionViewCell.swift */,
+				217C9134276C95B4005E3F9A /* CustomCellCollectionViewCell.xib */,
 				21B397102673704300D410E2 /* Assets.xcassets */,
 				21B397122673704300D410E2 /* LaunchScreen.storyboard */,
 				21B397152673704300D410E2 /* Info.plist */,
 				2192E91226BD46A500338089 /* Result10ViewController.swift */,
-				218329DD2763626E00573556 /* CharacterListViewController.swift */,
 			);
 			path = Gaoha;
 			sourceTree = "<group>";
@@ -201,6 +207,7 @@
 			files = (
 				21B39730267372A900D410E2 /* bg_red@2x.png in Resources */,
 				21B397142673704300D410E2 /* LaunchScreen.storyboard in Resources */,
+				217C9136276C95B4005E3F9A /* CustomCellCollectionViewCell.xib in Resources */,
 				21B39739267372A900D410E2 /* monster009.png in Resources */,
 				21B3972E267372A900D410E2 /* bg_gold@2x.png in Resources */,
 				21B39736267372A900D410E2 /* monster003.png in Resources */,
@@ -231,6 +238,7 @@
 				21B3970C2673703400D410E2 /* ViewController.swift in Sources */,
 				21B397082673703400D410E2 /* AppDelegate.swift in Sources */,
 				218329DE2763626E00573556 /* CharacterListViewController.swift in Sources */,
+				217C9135276C95B4005E3F9A /* CustomCellCollectionViewCell.swift in Sources */,
 				21B3970A2673703400D410E2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

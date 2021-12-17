@@ -13,12 +13,13 @@ class CharacterListViewController: UIViewController ,
     UICollectionViewDelegateFlowLayout
 {
     
-    
+    @IBOutlet weak var collectionView: UICollectionView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        collectionView.register(UINib(nibName: "CustomCellCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CustomCell")
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -28,11 +29,15 @@ class CharacterListViewController: UIViewController ,
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell:UICollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomCell", for: indexPath) as! CustomCell
         
-        let label = cell.contentView.viewWithTag(1) as! UILabel
+//        let label = cell.contentView.viewWithTag(1) as! UILabel
+//        
+//        label.text = String(indexPath.row + 1)
         
-        label.text = String(indexPath.row + 1)
+//        if let cell = cell as? CustomCell {
+//            
+//        }
         
         return cell
         
