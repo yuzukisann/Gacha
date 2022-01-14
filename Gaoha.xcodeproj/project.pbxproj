@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21524203279187E0008CF454 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 21524202279187E0008CF454 /* Realm */; };
+		21524205279187E0008CF454 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 21524204279187E0008CF454 /* RealmSwift */; };
+		21524207279189D6008CF454 /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21524206279189D6008CF454 /* Monster.swift */; };
+		2152420927918B45008CF454 /* MonsterList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152420827918B45008CF454 /* MonsterList.swift */; };
 		217C9135276C95B4005E3F9A /* CustomCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217C9133276C95B4005E3F9A /* CustomCellCollectionViewCell.swift */; };
 		217C9136276C95B4005E3F9A /* CustomCellCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 217C9134276C95B4005E3F9A /* CustomCellCollectionViewCell.xib */; };
 		218329DE2763626E00573556 /* CharacterListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218329DD2763626E00573556 /* CharacterListViewController.swift */; };
@@ -35,6 +39,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		21524206279189D6008CF454 /* Monster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monster.swift; sourceTree = "<group>"; };
+		2152420827918B45008CF454 /* MonsterList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterList.swift; sourceTree = "<group>"; };
 		217C9133276C95B4005E3F9A /* CustomCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellCollectionViewCell.swift; sourceTree = "<group>"; };
 		217C9134276C95B4005E3F9A /* CustomCellCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCellCollectionViewCell.xib; sourceTree = "<group>"; };
 		218329DD2763626E00573556 /* CharacterListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +75,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21524205279187E0008CF454 /* RealmSwift in Frameworks */,
+				21524203279187E0008CF454 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +115,7 @@
 				21B397122673704300D410E2 /* LaunchScreen.storyboard */,
 				21B397152673704300D410E2 /* Info.plist */,
 				2192E91226BD46A500338089 /* Result10ViewController.swift */,
+				2152420827918B45008CF454 /* MonsterList.swift */,
 			);
 			path = Gaoha;
 			sourceTree = "<group>";
@@ -116,6 +125,7 @@
 			children = (
 				21B3971D267372A800D410E2 /* background */,
 				21B39722267372A900D410E2 /* monster */,
+				21524206279189D6008CF454 /* Monster.swift */,
 			);
 			path = GachaResources;
 			sourceTree = "<group>";
@@ -164,6 +174,10 @@
 			dependencies = (
 			);
 			name = Gaoha;
+			packageProductDependencies = (
+				21524202279187E0008CF454 /* Realm */,
+				21524204279187E0008CF454 /* RealmSwift */,
+			);
 			productName = Gaoha;
 			productReference = 21B397042673703400D410E2 /* Gaoha.app */;
 			productType = "com.apple.product-type.application";
@@ -191,6 +205,9 @@
 				Base,
 			);
 			mainGroup = 21B396FB2673703400D410E2;
+			packageReferences = (
+				21524201279187E0008CF454 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+			);
 			productRefGroup = 21B397052673703400D410E2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -236,6 +253,8 @@
 				2192E91326BD46A500338089 /* Result10ViewController.swift in Sources */,
 				21B3973D2673794C00D410E2 /* ResulltViewControllen.swift in Sources */,
 				21B3970C2673703400D410E2 /* ViewController.swift in Sources */,
+				21524207279189D6008CF454 /* Monster.swift in Sources */,
+				2152420927918B45008CF454 /* MonsterList.swift in Sources */,
 				21B397082673703400D410E2 /* AppDelegate.swift in Sources */,
 				218329DE2763626E00573556 /* CharacterListViewController.swift in Sources */,
 				217C9135276C95B4005E3F9A /* CustomCellCollectionViewCell.swift in Sources */,
@@ -439,6 +458,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		21524201279187E0008CF454 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.21.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		21524202279187E0008CF454 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 21524201279187E0008CF454 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		21524204279187E0008CF454 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 21524201279187E0008CF454 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 21B396FC2673703400D410E2 /* Project object */;
 }

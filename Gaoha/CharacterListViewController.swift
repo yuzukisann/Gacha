@@ -30,7 +30,7 @@ class CharacterListViewController: UIViewController ,
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomCell", for: indexPath) as! CustomCell
-        
+        cell.monsterImageView.frame = cell.bounds
 //        let label = cell.contentView.viewWithTag(1) as! UILabel
 //        
 //        label.text = String(indexPath.row + 1)
