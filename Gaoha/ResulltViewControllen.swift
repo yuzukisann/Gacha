@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Realm
 import AVFoundation
 
 class ResultViewController: UIViewController {
@@ -35,13 +36,19 @@ class ResultViewController: UIViewController {
         // if=もし
         // もしnumberが9だったら
         if number == 9 {
-            monsterImageView.image = UIImage(named: "1")
+            // モンスターを取り出す
+            let monster = monsterList[0]
+            // Monsterの中のimageNameを取り出しす
+            monster.imageName = UIImage(named: monster.imageName)
             
-            // numberが7以上だったら
-            //        } else if number > 7 {
-            // もしnumberが9だったら
+            // モンスターを保存
+            let realm = try! Realm()
+            try! realm.write {
+                realm.add(monster)
+            }
+            
         } else if number > 12 {
-            monsterImageView.image = UIImage(named: "2")
+        monsterImageView.image = UIImage(named: "2")
             
         } else if number > 8 {
             monsterImageView.image = UIImage(named: "3")
@@ -55,44 +62,39 @@ class ResultViewController: UIViewController {
             monsterImageView.image = UIImage(named: "5")
             
         }
-        
-        
-        
-        
-        
-        
-    }
     
-    //
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-                            
-        sleep(1)
-        
-        kawaiiPlayer.currentTime = 0
+    }
 
-        kawaiiPlayer.play()
+//
+override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    
+    sleep(1)
+    
+    kawaiiPlayer.currentTime = 0
+    
+    kawaiiPlayer.play()
+    
+    UIView.animate(
+        withDuration: 1,
         
-        UIView.animate(
-            withDuration: 1,
+        animations: {
+            self.monsterImageView.frame.origin.y = 100
             
-            animations: {
-                self.monsterImageView.frame.origin.y = 100
-                
-            },
-            
-            completion: nil
-        )
-    }
-    
-    
-    @IBAction func back() {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
-    
-    
-    
+        },
+        
+        completion: nil
+    )
+}
+
+
+@IBAction func back() {
+    self.dismiss(animated: true, completion: nil)
+}
+
+
+
+
 }
 
 
