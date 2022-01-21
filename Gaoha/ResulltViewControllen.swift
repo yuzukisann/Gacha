@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import Realm
+import RealmSwift
 import AVFoundation
 
 class ResultViewController: UIViewController {
@@ -39,7 +39,7 @@ class ResultViewController: UIViewController {
             // モンスターを取り出す
             let monster = monsterList[0]
             // Monsterの中のimageNameを取り出しす
-            monster.imageName = UIImage(named: monster.imageName)
+            monsterImageView.image = UIImage(named: monster.imageName)
             
             // モンスターを保存
             let realm = try! Realm()
@@ -50,11 +50,39 @@ class ResultViewController: UIViewController {
         } else if number > 12 {
         monsterImageView.image = UIImage(named: "2")
             
+            let monster = monsterList[0]
+            // Monsterの中のimageNameを取り出しす
+            monsterImageView.image = UIImage(named: monster.imageName)
+            
+            // モンスターを保存
+            let realm = try! Realm()
+            try! realm.write {
+                realm.add(monster)
+            }
+            
         } else if number > 8 {
             monsterImageView.image = UIImage(named: "3")
+            let monster = monsterList[0]
+            // Monsterの中のimageNameを取り出しす
+            monsterImageView.image = UIImage(named: monster.imageName)
+            
+            // モンスターを保存
+            let realm = try! Realm()
+            try! realm.write {
+                realm.add(monster)
+            }
             
         } else if number > 6 {
             monsterImageView.image = UIImage(named: "4")
+            let monster = monsterList[0]
+            // Monsterの中のimageNameを取り出しす
+            monsterImageView.image = UIImage(named: monster.imageName)
+            
+            // モンスターを保存
+            let realm = try! Realm()
+            try! realm.write {
+                realm.add(monster)
+            }
             
         }
         // それ以外
