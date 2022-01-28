@@ -21,7 +21,7 @@ class Result10ViewController: UIViewController {
     @IBOutlet var monsterImageView10: UIImageView!
     
     
-    var monsterArray: [UIImage] = []
+    var monsterArray: [Monster] = []
     
     
     @IBAction func back() {
@@ -35,17 +35,17 @@ class Result10ViewController: UIViewController {
         for _ in 1...10 {
             appendImage()
         }
+        monsterImageView1.image = UIImage(named: monsterArray[0].imageName)
+        monsterImageView2.image = UIImage(named: monsterArray[1].imageName)
+        monsterImageView3.image = UIImage(named: monsterArray[2].imageName)
+        monsterImageView4.image = UIImage(named: monsterArray[3].imageName)
+        monsterImageView5.image = UIImage(named: monsterArray[4].imageName)
+        monsterImageView6.image = UIImage(named: monsterArray[5].imageName)
+        monsterImageView7.image = UIImage(named: monsterArray[6].imageName)
+        monsterImageView8.image = UIImage(named: monsterArray[7].imageName)
+        monsterImageView9.image = UIImage(named: monsterArray[8].imageName)
+        monsterImageView10.image = UIImage(named: monsterArray[9].imageName)
         
-        monsterImageView1.image = monsterArray[0]
-        monsterImageView2.image = monsterArray[1]
-        monsterImageView3.image = monsterArray[2]
-        monsterImageView4.image = monsterArray[3]
-        monsterImageView5.image = monsterArray[4]
-        monsterImageView6.image = monsterArray[5]
-        monsterImageView7.image = monsterArray[6]
-        monsterImageView8.image = monsterArray[7]
-        monsterImageView9.image = monsterArray[8]
-        monsterImageView10.image = monsterArray[9]
 
         // Do any additional setup after loading the view.
     }
@@ -63,15 +63,16 @@ class Result10ViewController: UIViewController {
             
             
         //配列を画像に追加
-            monsterArray.append(UIImage(named: "1")!)
+            //monsterArray.append(UIImage(named: "1")!)
+            monsterArray.append(monsterList[0])
         }else if number > 12 {
-            monsterArray.append(UIImage(named: "2")!)
+            monsterArray.append(monsterList[1])
         }else if number > 8 {
-            monsterArray.append(UIImage(named: "3")!)
+            monsterArray.append(monsterList[2])
         }else if number > 6 {
-            monsterArray.append(UIImage(named: "4")!)
+            monsterArray.append(monsterList[3])
         } else {
-            monsterArray.append(UIImage(named: "5")!)
+            monsterArray.append(monsterList[4])
         }
     
     

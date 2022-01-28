@@ -48,9 +48,9 @@ class ResultViewController: UIViewController {
             }
             
         } else if number > 12 {
-        monsterImageView.image = UIImage(named: "2")
+        
             
-            let monster = monsterList[0]
+            let monster = monsterList[1]
             // Monsterの中のimageNameを取り出しす
             monsterImageView.image = UIImage(named: monster.imageName)
             
@@ -61,8 +61,8 @@ class ResultViewController: UIViewController {
             }
             
         } else if number > 8 {
-            monsterImageView.image = UIImage(named: "3")
-            let monster = monsterList[0]
+            
+            let monster = monsterList[2]
             // Monsterの中のimageNameを取り出しす
             monsterImageView.image = UIImage(named: monster.imageName)
             
@@ -73,8 +73,8 @@ class ResultViewController: UIViewController {
             }
             
         } else if number > 6 {
-            monsterImageView.image = UIImage(named: "4")
-            let monster = monsterList[0]
+            
+            let monster = monsterList[3]
             // Monsterの中のimageNameを取り出しす
             monsterImageView.image = UIImage(named: monster.imageName)
             
@@ -87,7 +87,19 @@ class ResultViewController: UIViewController {
         }
         // それ以外
         else {
-            monsterImageView.image = UIImage(named: "5")
+        
+            let monster = monsterList[4]
+            // Monsterの中のimageNameを取り出しす
+            monsterImageView.image = UIImage(named: monster.imageName)
+            
+            // モンスターを保存
+            let realm = try! Realm()
+            try! realm.write {
+                realm.add(monster)
+            }
+            
+            
+            
             
         }
     
