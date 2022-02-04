@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import RealmSwift
 class Result10ViewController: UIViewController {
     
     @IBOutlet var monsterImageView1: UIImageView!
@@ -45,6 +45,21 @@ class Result10ViewController: UIViewController {
         monsterImageView8.image = UIImage(named: monsterArray[7].imageName)
         monsterImageView9.image = UIImage(named: monsterArray[8].imageName)
         monsterImageView10.image = UIImage(named: monsterArray[9].imageName)
+        let realm = try! Realm()
+        try! realm.write {
+            realm.add(monsterArray[0])
+            realm.add(monsterArray[1])
+            realm.add(monsterArray[2])
+            realm.add(monsterArray[3])
+            realm.add(monsterArray[4])
+            realm.add(monsterArray[5])
+            realm.add(monsterArray[6])
+            realm.add(monsterArray[7])
+            realm.add(monsterArray[8])
+            realm.add(monsterArray[9])
+
+
+        }
         
 
         // Do any additional setup after loading the view.
