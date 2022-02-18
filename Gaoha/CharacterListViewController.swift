@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class CharacterListViewController: UIViewController ,
     UICollectionViewDelegate,
@@ -14,23 +15,44 @@ class CharacterListViewController: UIViewController ,
 {
     
     @IBOutlet weak var collectionView: UICollectionView!
+    var monsterList: [Monster] = []
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         collectionView.register(UINib(nibName: "CustomCellCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CustomCell")
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let realm = try! Realm()
+        monsterList = realm.objects(Monster.self).map { $0 }
+        collectionView.reloadData()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 12
+        return monsterList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomCell", for: indexPath) as! CustomCell
         cell.monsterImageView.frame = cell.bounds
+        cell.monsterImageView.image = UIImage(named: monsterList[indexPath.row].imageName)
+        if monsterList[indexPath.row].type == "red" {
+            cell.backgroundColor = .red
+        } else if monsterList[indexPath.row].type == "yellow" {
+            cell.backgroundColor = .yellow
+        } else if monsterList[indexPath.row].type == "blue" {
+            cell.backgroundColor = .blue
+        } else if monsterList[indexPath.row].type == "orenge" {
+            cell.backgroundColor = .orange
+        } else if monsterList[indexPath.row].type == "green" {
+            cell.backgroundColor = .green
+        }
 //        let label = cell.contentView.viewWithTag(1) as! UILabel
 //        
 //        label.text = String(indexPath.row + 1)

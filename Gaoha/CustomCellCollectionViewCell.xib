@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -18,24 +17,21 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="8aN-2M-t8z">
-                        <rect key="frame" x="0.0" y="0.0" width="398" height="390"/>
+                        <rect key="frame" x="0.0" y="0.0" width="398" height="397"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </imageView>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <color key="backgroundColor" systemColor="systemPinkColor"/>
             <size key="customSize" width="398" height="397"/>
             <connections>
                 <outlet property="monsterImageView" destination="8aN-2M-t8z" id="LK6-Qf-cpp"/>
             </connections>
-            <point key="canvasLocation" x="137.68115942028987" y="-23.772321428571427"/>
+            <point key="canvasLocation" x="461" y="36"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="1" width="1500" height="1500"/>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <image name="1" width="1117" height="1280"/>
     </resources>
 </document>
